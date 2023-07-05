@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "file": "bundle_inline.js",
+  "sources": [
+    "../src/index_inline.js",
+    "../src/foo_inline.js"
+  ],
+  "sourcesContent": [
+    "import { foo } from './foo.js';\n\nfunction wat(fn, msg) {\n  foo(fn, msg);\n}\n\nwat(function hello(msg) {\n  throw new Error(msg);\n}, 'boop');\n",
+    "export function foo(fn, msg) {\n  fn(msg);\n}\n"
+  ],
+  "names": [
+    "fn",
+    "msg",
+    "Error",
+    "foo_inline"
+  ],
+  "mappings": "yBAEA,IAAaA,IAIT,SAAeC,GACjB,MAAM,IAAIC,MAAMD,EAClB,ECRO,SAAaD,EAAIC,GACtBD,EAAGC,EACL,CDCEE,CAAIH,EAKH"
+}
